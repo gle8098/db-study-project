@@ -15,8 +15,8 @@
 4. Платежная транзакция // Check
 5. Товары в платежной транзакции // Item in Check
 
-[Концептуальная модель](Conceptual model.png)
+[Концептуальная модель](./Conceptual model.png)
 
 ## III Логическая модель
 
-[Логическая модель](Logical model.png)
+[Логическая модель](./Logical model.png)
