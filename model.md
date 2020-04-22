@@ -18,11 +18,11 @@
 7. Buyer -- покупатель
 8. Address -- адрес
 
-[Концептуальная модель](Conceptual_model.png)
+[Концептуальная модель](Conceptual_model.jpg)
 
 ## III Логическая модель
 
-[Логическая модель](Logical_model.png)
+[Логическая модель](Logical_model.jpg)
 
 ## IX Физическая модель
 

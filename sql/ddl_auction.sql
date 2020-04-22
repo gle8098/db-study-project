@@ -29,8 +29,6 @@ CREATE TABLE IF NOT EXISTS auction_center.order_to_sell (
   order_id        SERIAL PRIMARY KEY,
   auctioneer_id   INTEGER NOT NULL REFERENCES
                                    auction_center.auctioneer(auctioneer_id),
-  auction_id      INTEGER NOT NULL REFERENCES
-                                   auction_center.auction(auction_id),
   min_value       INTEGER,
   description     VARCHAR(255)
 );
@@ -38,7 +36,8 @@ CREATE TABLE IF NOT EXISTS auction_center.order_to_sell (
 CREATE TABLE IF NOT EXISTS auction_center.item (
   item_id   SERIAL PRIMARY KEY,
   name      VARCHAR(255),
-  count     INTEGER CHECK ( count > 0 )
+  count     INTEGER CHECK ( count > 0 ),
+  unit      VARCHAR(20)
 );
 
 CREATE TABLE IF NOT EXISTS auction_center.item_in_order (
@@ -51,7 +50,7 @@ CREATE TABLE IF NOT EXISTS auction_center.owner (
   owner_id         SERIAL PRIMARY KEY,
   address_id       INTEGER NOT NULL REFERENCES auction_center.address(address_id),
   name             VARCHAR(255),
-  phone_no         INTEGER,
+  phone_no         VARCHAR(20),
   license_to_sell  INTEGER
 );
 
@@ -59,7 +58,7 @@ CREATE TABLE IF NOT EXISTS auction_center.buyer (
   buyer_id         SERIAL PRIMARY KEY,
   address_id       INTEGER NOT NULL REFERENCES auction_center.address(address_id),
   name             VARCHAR(255),
-  phone_no         INTEGER
+  phone_no         VARCHAR(20)
 );
 
 CREATE TABLE IF NOT EXISTS auction_center.receipt (
